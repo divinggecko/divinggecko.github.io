@@ -2,7 +2,8 @@ title: "이직하고싶은 동동이"
 description: "이직을 위한 한걸음 코딩 배우기"
 author: Dong Hyun Lim
 avatar: /logo.png
-email: oo1029518@gmail.com
+email: oo1029518@gmail.com  
+repository: "divinggecko/divinggecko.github.io"
 
 plugins:
   - jekyll-seo-tag
@@ -41,3 +42,8 @@ social:
     - https://github.com/ngzhio
 google_site_verification: u4WXQl0Eu66rsQo2kRdCNx
 lang: en
+comments:
+  provider: "utterances"
+utterances:
+  theme: "github-light"
+  issue_term: "pathname"
