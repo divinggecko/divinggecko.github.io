@@ -1,7 +1,8 @@
 ---
 layout: post
 title: 동동이 블로그
-tags: [to-do list]
+categories: 공지
+tags: [시작, 공지]
 ---
 
 # 안녕하세요 동동이 블로그입니다.
