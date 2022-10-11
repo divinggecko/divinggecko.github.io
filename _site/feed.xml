@@ -1,3 +1,671 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-10-02T23:04:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">이직하고싶은 동동이</title><subtitle>이직을 위한 한걸음 코딩 배우기</subtitle><author><name>Dong Hyun Lim</name></author><entry><title type="html">동동이 블로그</title><link href="http://localhost:4000/%EA%B3%B5%EC%A7%80/2022/09/28/divinggecko.html" rel="alternate" type="text/html" title="동동이 블로그" /><published>2022-09-28T00:00:00+09:00</published><updated>2022-09-28T00:00:00+09:00</updated><id>http://localhost:4000/%EA%B3%B5%EC%A7%80/2022/09/28/divinggecko</id><content type="html" xml:base="http://localhost:4000/%EA%B3%B5%EC%A7%80/2022/09/28/divinggecko.html"><![CDATA[<h1 id="안녕하세요-동동이-블로그입니다">안녕하세요 동동이 블로그입니다.</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-10-12T02:31:57+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">이직하고싶은 동동이</title><subtitle>이직을 위한 한걸음 코딩 배우기</subtitle><author><name>Dong Hyun Lim</name></author><entry><title type="html">파이썬 문자열 자료형</title><link href="http://localhost:4000/%EA%B3%B5%EB%B6%80/2022/10/09/%ED%8C%8C%EC%9D%B4%EC%8D%AC_%EB%AC%B8%EC%9E%90%EC%97%B4_%EC%9E%90%EB%A3%8C%ED%98%95.html" rel="alternate" type="text/html" title="파이썬 문자열 자료형" /><published>2022-10-09T00:00:00+09:00</published><updated>2022-10-09T00:00:00+09:00</updated><id>http://localhost:4000/%EA%B3%B5%EB%B6%80/2022/10/09/%ED%8C%8C%EC%9D%B4%EC%8D%AC_%EB%AC%B8%EC%9E%90%EC%97%B4_%EC%9E%90%EB%A3%8C%ED%98%95</id><content type="html" xml:base="http://localhost:4000/%EA%B3%B5%EB%B6%80/2022/10/09/%ED%8C%8C%EC%9D%B4%EC%8D%AC_%EB%AC%B8%EC%9E%90%EC%97%B4_%EC%9E%90%EB%A3%8C%ED%98%95.html"><![CDATA[<h1 id="파이썬-문자열-자료형">파이썬 문자열 자료형</h1>
+
+<p>문자열이란 문자 단어등으로 구성된 문자 집합들을 이야기한다.  문자열이라 해서 우리가 아는 언어만 들어가는게 아닌 숫자도 “에 들어가면 문자열로 인식된다.</p>
+
+<h2 id="문자열-만드는-방법">문자열 만드는 방법</h2>
+<p>문자열은 만드는 방법에 대해 알아보자면  “(큰 따옴표), ‘(작은 따옴표), “”“(큰 따옴표 3개) ‘’‘(작은 따옴표 3개) 를 양쪽에 둘러 싸는 방법이 있다.</p>
+
+<h2 id="예제">예제</h2>
+<p>(‘Love’, “SCUBA”, “"”Freediving”””, ‘'’Water’’’)<br />
+이런 방식을 통해 사용된다.<br />
+이런 4가지 방법이 있는 이유는 상황에 맞게 큰 따옴표나 작은 따옴표를 사용 할 수 있게 있다.</p>
+
+<h2 id="먼저-문자열에-가-포함되어-있는경우">먼저 문자열에 ‘가 포함되어 있는경우</h2>
+<p>“I Love McDonald’s Bugger”<br />
+이런 문장에 ‘가 포함되어 있는경우는 “로 둘러싸 표현을 하면 된다.</p>
+
+<h2 id="다음은-문자열에-를-사용하는-경우">다음은 문자열에 “를 사용하는 경우</h2>
+<p>‘“I Love SCUBA” he Says.’<br />
+이런 문자열에선 ‘ 따옴표를 추가 시켜 사용 할 수 있다.</p>
+
+<h3 id="-사용-하기">\ 사용 하기</h3>
+<p>또 한가지 오류가 나지 않도록 쓰는 방법이 있는데 \를 따옴표 앞에 사용할 경우 그 따옴표는 문자로 입력이 된다.<br />
+‘I Love McDonald's Bugger’
+이러한 방법으로도 사용이 가능하다.</p>
+
+<h2 id="여러줄-문자열-입력">여러줄 문자열 입력</h2>
+<p>문자열을 여러줄을 사용 하고 싶으면 매 줄마다 “” 를 입력 할 수도 있지만</p>
+
+<p>그런 번거로운 작업이 아닌 \n(이스케이프코드), “””, ‘’’ 를 이용하면 여러줄의 문자열이 입력이 가능하다.</p>
+
+<h3 id="n-을-이용한-줄-바꾸기">\n 을 이용한 줄 바꾸기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'My name is Dong Hyun Lim.\nDo You Like Bugger?'  
+'My name is Dong Hyun Lim.  
+Do You Like Bugger?'
+</code></pre></div></div>
+<p>이러한 방식으로 사용이 가능하다.</p>
+
+<h3 id="-혹은--사용하기">””” 혹은 ‘’’ 사용하기</h3>
+<p>위에 방식은 좋은나 문장이 길어지고 보기 불편 하다.<br />
+그래서 큰 따옴표 3개나 작은 따옴표 3개를 이용해 간단하게 줄을 바꿀 수 있다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"""My name is Dong Hyun Lim.  
+Do You Like Bugger?"""
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'''I Live Bugger.  
+You Like Bugger?'''
+</code></pre></div></div>
+<p>이러한 방식을 이용해서 작성이 가능하다.</p>
+
+<h2 id="이스케이프코드">이스케이프코드</h2>
+<p>이스케이프 코드란 프로그래밍 할때 쓰이도록 미리 설정된 문자 조합이다.<br />
+주로 출력물을 보기 편하게 정렬할때에 쓰인다.<br />
+자주 사용되는 이스케이프 코드 몇가지를 알아보도록 하자.</p>
+<h3 id="n">\n</h3>
+<p>문자열 안에서 줄을 바꿀때 쓰임</p>
+<h3 id="t">\t</h3>
+<p>탬 간격을 줄 때 사용</p>
+<h3>\\</h3>
+<p>\를 그대로 쓰기 위해 사용</p>
+<h3 id="-1">\’</h3>
+<p>‘를 그대로 쓰기 위해 사용</p>
+<h3 id="-2">\”</h3>
+<p>“를 그대로 쓰기 위해 사용</p>
+
+<h2 id="문자열-연산">문자열 연산</h2>
+<p>문자열을 더하거나 곱할 수 있는게 파이썬의 재미난 특징이다.<br />
+다음은 문자열을 더하고 곱하는 여러가지 방법을 알아볼 것이다.</p>
+
+<h3 id="문자열-더하기">문자열 더하기</h3>
+<p>간단하게 문자열을 숫자처럼 더하는 방식</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 'I Love'  
+b = 'You'  
+a + b  
+'I Love You'  
+</code></pre></div></div>
+
+<p>이런 방식으로 문자열을 더할수 있다.</p>
+
+<h3 id="문자열-곱하기">문자열 곱하기</h3>
+<p>문자열을 곱하는 방법으로 예시로 알아보자</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 'SCUBA'  
+a * 2  
+'SCUBASCUBA' 
+</code></pre></div></div>
+
+<p>이렇게 곱하기를 쓰면 두번 반복되어 나오게 된다.</p>
+
+<h3 id="문자열-길이-구하기">문자열 길이 구하기</h3>
+<p>len 함수를 사용 하면 문자열의 길이를 알수 있다.
+a = ‘I Have Water’<br />
+len(a)<br />
+12</p>
+
+<p>이렇게 len 함수를 이용하면 문자열의 길이를 알수 있다.</p>
+
+<h2 id="문자열-인덱싱과-슬라이싱">문자열 인덱싱과 슬라이싱</h2>
+<p>Indexing은 가리킨다라는 의미이고 ,Slicing 자른다 라는 의미다. 이것처럼 문장을 자르고 가르키는 방법을 알아보자.</p>
+
+<h3 id="인덱싱">인덱싱</h3>
+<p>a = ‘I Love SCUBA’<br />
+이런 문장에서 내가 3번째 위치한 L를 구하고 싶다면 a[3] 이렇게 입력을 보통 할것이다.<br />
+하지만 우리는 a[2] 를 입력 해야 한다. 왜 그럴까?<br />
+파이썬은 1부터가 아닌 0부터 시작을 한다. 그러므로 L을 도출 하기위해선 0-1-2 순서로 2를<br />
+입력해야 L을 구해준다.</p>
+
+<p>그럼 한번 인덱싱을 이용해보자</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> a = 'I Love SCUBA'  
+ a[4]  
+ 'v'
+ a[10]
+ 'U'
+ a[-1]
+ 'A'
+ a[-5]
+ 'S'
+</code></pre></div></div>
+<p>이렇게 구해진다. 여기서 좀 생소한 -가 있다 이건 뒤에서 부터 셀때 쓰인다.
+-0과0은 같기 때문에 -는 0부터가 아닌 -1부터 쓰인다.</p>
+
+<h3 id="문자열-슬라이싱">문자열 슬라이싱</h3>
+<p>위에선 우린 한 글자만 뽑아 왔다 하지만 우린 단어나 중간 문장을 뽑아 오고 싶을 수 있다.<br />
+그럴땐 슬라이싱 기법을 사용하면 뽑아 올수 있다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 'I Love SCUBA'
+b = a[2] + a[3] + a[4] + a[5]
+b
+'Love'
+</code></pre></div></div>
+<p>위에 처럼 할 수 있지만 우리는 더 편한 방법을 추구한다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 'I Love SCUBA'
+a[2:6]
+'Love'
+</code></pre></div></div>
+<p>이러한 방식으로 Love를 뽑아 낼수 있다.<br />
+하지만 의문이 들것이다. 왜 a[2:5]이 아닌 a[2:6]인가<br />
+이건 a[시작번호:끝번호] 이지만 지정한 끝번호는 포함하지 않기 때문에<br />
+우린 그 다음번호로 입력을 해야지 우리가 원하는 위치까지 뽑아 올수있다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 'I Love SCUBA'
+a[7:]
+'SCUBA'
+</code></pre></div></div>
+<p>이런 방식으로 입력하면 시작번호 부터 마지막 끝까지 뽑아온다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 'I Love SCUBA'
+a[:6]
+'I Love'
+</code></pre></div></div>
+<p>반대로 시작 번호를 비우면 처음부터 시작하여 마지막 번호까지 뽑아온다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 'I Love SCUBA'
+a[:]
+'I Love SCUBA'
+</code></pre></div></div>
+<p>아무것도 입력 하지 않는다면 처음부터 끝까지 뽑아오게 된다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 'I Love SCUBA'
+a[2:-5]
+'Love'
+</code></pre></div></div>
+<p>-표현도 당연히 사용이 가능하다.</p>
+
+<h3 id="슬라이싱으로-문자열-나누기">슬라이싱으로 문자열 나누기</h3>
+
+<p>위에 방식을 이용하여 문자열을 나눠서 표현도 가능하다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = "20221010suny"
+date = a[:8]
+weather = a[8:]
+date
+'20201010'
+weather
+'sunny' 
+</code></pre></div></div>
+<p>이런 형식으로 나눠서도 표현이 가능하다.</p>
+
+<p>똑같이 응용하여 3개로도 나눌 수 있다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = "20221010suny"
+year = a[:4]
+dat = a[4:8]
+weather = a[8:]
+year
+'2022'
+day
+'1010'
+weather
+'sunny'
+</code></pre></div></div>
+<p>이런 방식을 통해 나눌수 있다. 4개도 5개도 가능 하다.</p>
+
+<blockquote>
+  <h3 id="글자-바꾸기">글자 바꾸기</h3>
+  <p>SCUVA 란 글자를 SCUBA로 바꿔보자</p>
+
+  <p>단순히 V를 B로 바꾼다고 생각하면</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = "SCUVA"
+a[3]
+'V'
+a[3] = 'B'
+</code></pre></div>  </div>
+  <p>이런 방식을 사용하면 오류가 나게된다. 
+위에서 배웠던 슬라이싱 기법으로 바꿔보자면</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = "SCUVA"
+a[:3]
+'SCU'
+a[4:]
+'A'
+a[:3] + 'B' + a[4:]
+'SCUBA'
+</code></pre></div>  </div>
+  <p>이러한 방식으로 문자를 슬라이싱해 글자를 더해서 바꿀수 있다.</p>
+</blockquote>
+
+<h2 id="문자열-포매팅">문자열 포매팅</h2>
+
+<h3 id="숫자-바로-대입하기">숫자 바로 대입하기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"I eat %d bugger." % 3
+'I eat 3 bugger.'
+</code></pre></div></div>
+<p>위에 방식으로 %d 라는 숫자 포매팅을 이용해 숫자를 대입 하는 방법이 있다.</p>
+
+<h3 id="문자열-대입">문자열 대입</h3>
+<p>이번엔 숫자가 아닌 문자를 포매팅을 이용해 넣어 보겠다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"I eat %s bugger." % "two"
+'I eat tow bugger.'
+</code></pre></div></div>
+<p>이러한 방식으로 위에선 숫자랑 다르게 %s를 이용 하여 문자열을 대입할수 있다.</p>
+
+<h3 id="숫자를-변수로-대입-하기">숫자를 변수로 대입 하기</h3>
+<p>이번엔 변수를 이용하여 대입해 보도록 하자.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 2
+"I eat %d bugger" % a
+'I eat 2 bugger'
+</code></pre></div></div>
+<p>이런 방식으로 변수로도 입력이 가능하다.</p>
+
+<h3 id="2개-이상의-값-넣기">2개 이상의 값 넣기</h3>
+<p>위에선 한개씩 넣어봤지만 이번엔 여러개의 값을 입력해 보자.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 2
+b = 'sunny'
+"I eat %d bugge. today's weather is %s." % (a, b)
+'I eat 2 bugge. today's weather is sunny.'
+</code></pre></div></div>
+<p>이렇게 () 안에 , 표시로 구분해 넣어주면 여러개의 값을 입력 할수 있다.</p>
+
+<h3 id="문자열-포맷코드">문자열 포맷코드</h3>
+<blockquote>
+  <p>%s: 문자열을 넣을때 쓰는 코드.<br />
+%c: 문자 한개를 넣을때 쓰는 코드.<br />
+%d: 정수를 넣을때 쓰는 코드.<br />
+%f: 부동소수를 넣을때 쓰는 코드.<br />
+%o: 8진수를 넣을때 쓰는 코드.<br />
+%x: 16진수를 넣을때 쓰는 코드.<br />
+%%: %를 그대로 표현하기 위해 쓰는코드.</p>
+</blockquote>
+
+<p>이때 재밌는 포맷코드가 %s 코드 인데 이 코드는 문자만이 아닌<br />
+숫자나 소수를 전부 입력이 가능하다.<br />
+%s는 자동으로 입력값은 문자열로 바꿔인식 하기 때문에 다 입력이 가능하다.</p>
+
+<p>그리고 우리가 만약 %를 포맷코드가 있는 문자열에 넣고 싶다.<br />
+그렇다면 간단하게 생각하면 그냥 뒤에 %을 붙이면 될꺼란 생각을 하지만<br />
+그냥 입력 하게된다면 오류가 나게된다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"loding %d%" % 97 
+</code></pre></div></div>
+<p>이러한 방식이 아닌</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"loding %d%%" % 97
+'Loding 97%'
+</code></pre></div></div>
+<p>이렇게 입력을 해야 한다.</p>
+
+<h2 id="포맷-코드와-숫자-함께-사용하기">포맷 코드와 숫자 함께 사용하기</h2>
+<p>이번엔 포맷 코드와 숫자를 함께 사용해 다양한 방법으로 사용하는 방법을 배워보자.</p>
+
+<h3 id="정렬과-공백">정렬과 공백</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"%10s" % "hello"
+'     hello'
+</code></pre></div></div>
+<p>이렇게 코드 중간에 숫자10을 넣으면 전체길이가 10개이고 나머진 공백인 문자가 입력이 된다.</p>
+
+<p>반대로 -10을 입력하면</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"%-10Dong" % "hello"
+'hello     Dong'
+</code></pre></div></div>
+<p>이렇게 왼쪽 정렬이 되고 hello 옆 5칸을 공백이 생기게 된다.</p>
+
+<h3 id="소수점-표현">소수점 표현</h3>
+<p>우리가 만약 긴 소수점중에 뒤에 원하는 자리까지만 표현은 하고 싶다면</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"%0.3f" % 3.141592654
+'3.141'
+</code></pre></div></div>
+<p>이렇게 %뒤에 표현하고 싶은 자리수를 입력하면 그 자리수까지 표현이 된다.</p>
+
+<p>만약 여기서 0.3이 아닌 위에처럼 소수점 앞에도 숫자를 입력하면 어떻게 될까?</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"%10.3f" % 3.141592654
+'     3.141'
+</code></pre></div></div>
+<p>이런식으로 소수점 4번째까지 표시하고 전체 길이가 10개인 문자열을 오른쪽 정렬하게 된다.</p>
+
+<h2 id="format-함수를-이용한-포매팅">format 함수를 이용한 포매팅</h2>
+<p>이번에 format 함수를 이용해 앞에서 했던 문자열을 만들어보자.</p>
+
+<h3 id="숫자-대입하기">숫자 대입하기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"I eat {0} bugger".format(2)
+'I eat 2 bugger'
+</code></pre></div></div>
+<p>이러한 방식으로 숫자를 넣을공간에 {0}을 입력하고 뒤에 format(2) 입력하면 2가 입력이 된다.</p>
+
+<h3 id="문자열-대입하기">문자열 대입하기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"I eat {0} bugger".format("two")
+'I eat two bugger'
+</code></pre></div></div>
+<p>위와 같은 방식으로 대입하면 가능하다.</p>
+
+<h3 id="변수로-대입하기">변수로 대입하기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 2
+"I eat {0} bugger".format(a)
+'I eat 2 bugger'
+</code></pre></div></div>
+<p>변수도 마찬가지로 대입하면 가능하다.</p>
+
+<h3 id="2개-이상의-변수-대입">2개 이상의 변수 대입</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 2
+b = 'sunny'
+"I eat {0} bugge. today's weather is {1}.".format(a, b)
+'I eat 2 bugge. today's weather is sunny.'
+</code></pre></div></div>
+<p>2개 이상의 값을 넣을땐 {0}, {1} 이런식으로 순서대로 넣으면 입력값 순서대로 들어간다. 
+{0}은 첫번째 값이 2 {1}은 두번째 값인 Sunny가 입력이 된다.</p>
+
+<h3 id="이름으로-넣기">이름으로 넣기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"I eat {a} bugge. today's weather is {b}.".format(a=2, b='sunny')
+'I eat 2 bugge. today's weather is sunny.'
+</code></pre></div></div>
+<p>이러한 방식으로 변수값 자체를 format() 안으로 집어넣어서도 사용이 가능하다.</p>
+
+<h3 id="혼용사용-하기">혼용사용 하기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"I eat {0} bugge. today's weather is {b}.".format(2, b='sunny')
+'I eat 2 bugge. today's weather is sunny.'
+</code></pre></div></div>
+<p>이러한 방식으로 인덱스와 이름을 혼용해서 사용할 수 있다.</p>
+
+<h3 id="왼쪽-정렬">왼쪽 정렬</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"{0:&lt;10}".format("hello")
+'hello     '
+</code></pre></div></div>
+<p>:&lt;10 을 이용하면 왼쪽 정렬을 하고 총 10자리 문자열로 만들 수 있다.</p>
+
+<h3 id="오르쪽-정렬">오르쪽 정렬</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"{0:&gt;10}".format("hello")
+'     hello'
+</code></pre></div></div>
+<p>:&gt;10 을 이용하면 오른쪽으로 정렬 하고 10자리 문자열을 만든다.</p>
+
+<h3 id="가운데-정렬">가운데 정렬</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"{0:^11}".format("hello")
+'   hello   '
+</code></pre></div></div>
+<p>:^ 는 가운데 정렬을 해준다.</p>
+
+<h3 id="공백-채우기">공백 채우기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"{0:!&lt;10}".format("hello")
+'hello!!!!!'
+
+"{0:#^11}".format("hello")
+"###hello###'
+</code></pre></div></div>
+<p>이렇게 정렬 표시 앞쪽에 공백에 넣을 문자를 넣어주면 공백을 그 문자로 채워준다.</p>
+
+<h3 id="소수점-표현-1">소수점 표현</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 3.141592654
+"{0:0.3f}".format(a)
+'3.141'
+</code></pre></div></div>
+<p>이러한 방식으로 .fromat 방식으로 앞에 0.3f 사용하여 소수점을 표현 하고싶은 자리까지 표현이 가능하다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"{0:10.3f}".format(a)
+'     3.141'
+</code></pre></div></div>
+<p>앞에와 같이 10.3f 로 10자리 숫자로도 맞출 수 있다.</p>
+
+<h3 id="-그대로-표현하기">{ 그대로 표현하기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"{{ SCUBA }}".format()
+'{ SCUBA }'
+</code></pre></div></div>
+
+<p>만약 .fromat 함수를 이용해서 {를 그대로 표현하고 싶다면 {를 {{이런 방식으로 두번 써주면 표현이 가능하다.</p>
+
+<h2 id="f문자열-포매팅">f문자열 포매팅</h2>
+
+<p>파이썬 3.6버전 부턴 f 문자열 포매팅이 사용이 가능하다.<br />
+f 문자열 포매팅을 사용하는 방법으론 <br />
+사용할 문자열 앞에 f를 붙이면 사용이 가능하다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = "임동현"
+b = 29
+f'내 이름은 {a}입니다. 나이는 {b}입니다.'
+'내 이름은 임동현입니다. 나이는 29입니다.'
+</code></pre></div></div>
+<p>이렇게 변수를 만들고 값을 넣어 표현이 가능하다.</p>
+
+<p>그리고 표현식을 지원 하기에 이런것도 가능하다.<br />
+(표현식이란 문자열 안에 변수와 +,- 같은 수식을 같이 사용하는걸 이야기함)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 29
+f'저는 내년에 {a+1}살이 됩니다.'
+'저는 내년에 30살이 됩니다.'
+</code></pre></div></div>
+<p>그리고 추후 배울 딕셔너리도 사용이 가능하다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = {'name':'임동현', 'age':30}
+f'내 이름은 {a["name"]}입니다. 나이는 {a["age"]}입니다.'
+'내 이름은 임동현입니다. 나이는30살입니다.
+</code></pre></div></div>
+
+<p>다음은 정렬 방법이다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f'{"hello":&lt;10}' (왼쪽 정렬)
+'hello     '
+f'{"hello":&gt;10}' (오른쪽 정렬)
+'     hello'
+f'{"hello":^11}' (가운데 정렬)
+'   hello   '
+</code></pre></div></div>
+<p>이렇게 정렬도 가능하다.</p>
+
+<p>다음은 공백을 채우는 방법이다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f'{"hello":$&lt;10}' 
+'hello$$$$$'
+f'{"hello":~^11}' 
+'~~~hello~~~'
+</code></pre></div></div>
+<p>정렬 표시 앞쪽에 채울 기호를 넣으면 채워서 출력이 된다.</p>
+
+<p>이번엔 소수점 표를 알아보자.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 3.141592654
+f'{a:0.4f}'
+'3.1415
+f'{a:10.4f}'
+"    3.1415'
+</code></pre></div></div>
+<p>이렇게 동일하게 표현이 가능하다.</p>
+
+<p>만약 { 표시를 그대로 사용하고 싶다면?</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f"{{ SCUBA }}"
+'{ SCUBA }'
+</code></pre></div></div>
+<p>이렇게 {{ 이렇게 두번 입력하여 사용이 가능하다.</p>
+
+<h2 id="문자열-관련-함수들">문자열 관련 함수들</h2>
+<p>문자열 자료형은 여러 자체적인 함수를 가지고 있다.<br />
+함수를 사용하기 위해선 .함수이름 이런 식으로 사용이 가능하다.</p>
+
+<h3 id="문자-개수-세기">문자 개수 세기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 'bugger'
+a.count('g')
+2
+</code></pre></div></div>
+<p>.count 함수를 이용하면 문자의 갯수를 알수 있다.</p>
+
+<h3 id="위치-찾기">위치 찾기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 'I Love SCUBA'
+a.find('e')
+5
+a.find('d')
+-1
+</code></pre></div></div>
+<p>.find 함수를 사용하면 문자가 처음나온 위치번호를 알려준다.
+만약 문자열에 존재 하지 않는다면 -1로 표시가된다.</p>
+
+<h3 id="위치-찾기2">위치 찾기2</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 'I Love SCUBA'
+a.index('e')
+5
+a.index('d')
+
+ValueError: substring not found
+</code></pre></div></div>
+<p>.index 함수를 사용하면 .find와 같이 문자가 처음나온 위치를 알려준다 하지만 문자가 없을경우<br />
+.find 함수와는 다르게 오류가 발생을 한다.</p>
+
+<h3 id="문자열-삽입">문자열 삽입</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>",".join('abcd')
+'a,b,c,d'
+</code></pre></div></div>
+<p>.join 함수를 이용하면 abcd 문자열 사이에 , 을 삽입한다.</p>
+
+<h3 id="소문자를-대문자로-바꾸기">소문자를 대문자로 바꾸기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = "hello"
+a.upper()
+'HELLO'
+</code></pre></div></div>
+<p>.upper 함수는 소문자를 대문자로 바꿔준다.<br />
+만약 문자열이 이미 대문자라면 아무 변화가 없다.</p>
+
+<h3 id="대문자를-소문자로-바꾸기">대문자를 소문자로 바꾸기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = "HELLO"
+a. lower()
+'hello'
+</code></pre></div></div>
+<p>.lower 함수를 이용하면 대문자를 소문자로 바꿔준다.</p>
+
+<h3 id="공백지우기">공백지우기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = " hello "
+a. lstrip()
+'hello '
+
+a. rstrip()
+' hello'
+
+a.strip()
+'hello'
+</code></pre></div></div>
+<p>.lstrip 함수는 한칸 이상의 연속된 왼쪽 공백을 지우고, .rstrip 함수는 한칸 이상의 연속된<br />
+오른쪽 공백을, .strip 함수는 양쪽 있는 한칸 이상의 연속된 공백을 지운다.</p>
+
+<h3 id="문자열-바꾸기">문자열 바꾸기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = "I Love SCUBA"
+a.replace("I", "You")
+'You Love SCUBA'
+</code></pre></div></div>
+<p>.replace(바꿔줄 문자, 바꿀 문자) 이렇게 입력을 하면 문자열 안의 값을 바꿔준다.</p>
+
+<h3 id="문자열-나누기">문자열 나누기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = "I Love SCUBA"
+a.split()
+['I', 'Love', 'SCUBA']
+
+b = "d:b:a:w"
+b.split(:)
+['d', 'b', 'a', 'w']
+</code></pre></div></div>
+
+<p>.split 함수를 이용하면 아무것도 괄호 안에 넣지 않으면 공백을 기준으로 나눠주고<br />
+만약 ()안에 특정 값을 넣어주면 그 값을 구분하여 나눠준다.</p>]]></content><author><name>Dong Hyun Lim</name></author><category term="공부" /><category term="파이썬" /><category term="문자열" /><category term="공부" /><category term="정리" /><summary type="html"><![CDATA[파이썬 문자열 자료형]]></summary></entry><entry><title type="html">파이썬 숫자형</title><link href="http://localhost:4000/%EA%B3%B5%EB%B6%80/2022/10/05/%ED%8C%8C%EC%9D%B4%EC%8D%AC_%EC%88%AB%EC%9E%90%ED%98%95.html" rel="alternate" type="text/html" title="파이썬 숫자형" /><published>2022-10-05T00:00:00+09:00</published><updated>2022-10-05T00:00:00+09:00</updated><id>http://localhost:4000/%EA%B3%B5%EB%B6%80/2022/10/05/%ED%8C%8C%EC%9D%B4%EC%8D%AC_%EC%88%AB%EC%9E%90%ED%98%95</id><content type="html" xml:base="http://localhost:4000/%EA%B3%B5%EB%B6%80/2022/10/05/%ED%8C%8C%EC%9D%B4%EC%8D%AC_%EC%88%AB%EC%9E%90%ED%98%95.html"><![CDATA[<h1 id="파이썬-숫자형">파이썬 숫자형</h1>
+
+<h3 id="숫자로-이루어진-형태를-이야기-하고-정수-실수-8진수-16진수를-사용함">숫자로 이루어진 형태를 이야기 하고 정수, 실수, 8진수, 16진수를 사용함</h3>
+
+<h2 id="정수형">정수형</h2>
+
+<h3 id="정수란-0을-포함한-양의-정수142152-음의-정수-25--332를-이야기-한다-이것을-대입하는것을-정수형-파이썬이다">정수란 0을 포함한 양의 정수(1,42,152) 음의 정수(-25, -332)를 이야기 한다. 이것을 대입하는것을 정수형 파이썬이다.</h3>
+<h3 id="대입-하자면-q--1-t---112-i--0-이런-방식으로-사용-된다">대입 하자면 q = 1, t = -112, i = 0 이런 방식으로 사용 된다.</h3>
+
+<h2 id="실수형">실수형</h2>
+
+<h3 id="실수란-소수점을-포함한-숫자를-이야기-한다">실수란 소수점을 포함한 숫자를 이야기 한다.</h3>
+<h3 id="대입-하자면-b--256-r---314-이런-방식으로-사용-된다">대입 하자면 b = 2.56, r = -3.14 이런 방식으로 사용 된다.</h3>
+<h3 id="또-다른-표현-방식이-있는데-컴퓨터식-지수-표현-방식으로">또 다른 표현 방식이 있는데 컴퓨터식 지수 표현 방식으로</h3>
+<h3 id="q523e6-이런-표현-방식도-사용한다-q5230000-반대로-q523e-6은-q000000523이-된다">q=5.23e6 이런 표현 방식도 사용한다. (q=5230000) 반대로 q=5.23e-6은 (q=0.00000523)이 된다.</h3>
+
+<h2 id="8진수와-16진수">8진수와 16진수</h2>
+
+<h3 id="8진수를-만들기-위해서는-octal-즉-0뒤에-영어-o소문자-대문자-전부-사용가능-넣고-숫자를-넣으면-8진수를-사용-할-수-있다">8진수를 만들기 위해서는 (Octal) 즉 0뒤에 영어 o(소문자 대문자 전부 사용가능) 넣고 숫자를 넣으면 8진수를 사용 할 수 있다.</h3>
+<h3 id="0o1678진수11910진수-이런식으로-사용된다">0o167(8진수)=119(10진수) 이런식으로 사용된다.</h3>
+
+<h3 id="16진수를-만들기-위해서는-0뒤에-x를-붙여주면-된다-이것도-대문자-소문자-구분-없음">16진수를 만들기 위해서는 0뒤에 x를 붙여주면 된다. (이것도 대문자 소문자 구분 없음)</h3>
+<h3 id="0x12df16진수614110진수-이런-식으로-사용된다">0x12df(16진수)=6141(10진수) 이런 식으로 사용된다.</h3>
+
+<h2 id="사칙-연산">사칙 연산</h2>
+
+<h3 id="사칙-연산도-파이썬에서-계산기처럼-연산자를-이용해-계산된다----">사칙 연산도 파이썬에서 계산기처럼 연산자를 이용해 계산된다.(+, -, /, *)</h3>
+
+<h4 id="h--10">h = 10</h4>
+<h4 id="q--2">q = 2</h4>
+<h4 id="h--q">h + q</h4>
+<h4 id="12">12</h4>
+<h4 id="h--q-1">h * q</h4>
+<h4 id="20">20</h4>
+
+<h3 id="이런-방식으로-계산되어-나온다">이런 방식으로 계산되어 나온다.</h3>
+
+<h3 id="여기에-이제-제곱도-가능한데-제곱을-만드는-방법은-곱하기-표시인--를-2번-입력하면-앞에-자리에-뒤에-숫자를-제곱자리에-올려-계산하게-된다">여기에 이제 제곱도 가능한데 제곱을 만드는 방법은 곱하기 표시인 * 를 2번 입력하면 앞에 자리에 뒤에 숫자를 제곱자리에 올려 계산하게 된다.</h3>
+
+<h4 id="w--2">w = 2</h4>
+<h4 id="t--4">t = 4</h4>
+<h4 id="w--t">w ** t</h4>
+<h4 id="16">16</h4>
+
+<h3 id="이렇게-계산되어-나온다">이렇게 계산되어 나온다.</h3>
+
+<h3 id="또-다른-형식으로-가-아닌--형식도-있는데-이건-나누고-나머지-값을-돌려주는-연산자이다">또 다른 형식으로 /가 아닌 % 형식도 있는데 이건 나누고 나머지 값을 돌려주는 연산자이다.</h3>
+
+<h4 id="5--2">5 % 2</h4>
+<h4 id="1">1</h4>
+<h4 id="2--5">2 % 5</h4>
+<h4 id="2">2</h4>
+
+<h4 id="이런식으로-나누고-남은-나머지-값을-돌려준다">이런식으로 나누고 남은 나머지 값을 돌려준다.</h4>
+
+<h3 id="제곱처럼--방식이-있듯이-나눗셈을-두번-입력하는--이런-연산자도-존재-하는데-나눗셈을-한-다음-몫을-반환하는-연산자-이다">제곱처럼 ** 방식이 있듯이 나눗셈을 두번 입력하는 // 이런 연산자도 존재 하는데 나눗셈을 한 다음 몫을 반환하는 연산자 이다</h3>
+<h3 id="보통-9--2-를-하면-나눠지는-값인-45가-나오게-된다-하지만--를-입력하게-되면">보통 9 / 2 를 하면 나눠지는 값인 4.5가 나오게 된다. 하지만 // 를 입력하게 되면</h3>
+
+<h4 id="9--2">9 // 2</h4>
+<h4 id="4">4</h4>
+
+<h3 id="이런식으로-나누고-남는-정수값-4를-출력해준다">이런식으로 나누고 남는 정수값 4를 출력해준다.</h3>]]></content><author><name>Dong Hyun Lim</name></author><category term="공부" /><category term="파이썬" /><category term="숫자형" /><category term="공부" /><category term="정리" /><summary type="html"><![CDATA[파이썬 숫자형]]></summary></entry><entry><title type="html">리눅스 명령어 포스팅</title><link href="http://localhost:4000/%EA%B3%B5%EB%B6%80/2022/10/03/%EB%A6%AC%EB%88%85%EC%8A%A4_%EC%BB%A4%EB%A7%A8%EB%93%9C.html" rel="alternate" type="text/html" title="리눅스 명령어 포스팅" /><published>2022-10-03T00:00:00+09:00</published><updated>2022-10-03T00:00:00+09:00</updated><id>http://localhost:4000/%EA%B3%B5%EB%B6%80/2022/10/03/%EB%A6%AC%EB%88%85%EC%8A%A4_%EC%BB%A4%EB%A7%A8%EB%93%9C</id><content type="html" xml:base="http://localhost:4000/%EA%B3%B5%EB%B6%80/2022/10/03/%EB%A6%AC%EB%88%85%EC%8A%A4_%EC%BB%A4%EB%A7%A8%EB%93%9C.html"><![CDATA[<h1 id="리눅스-명령어-정리">리눅스 명령어 정리</h1>
+
+<h2 id="pwd">PWD</h2>
+<h3 id="print-working-directory">(print working directory)</h3>
+<p>현재 작업중인 디렉토리 정보 출력</p>
+
+<h2 id="cd">cd</h2>
+<h3 id="change-directory">(change directory)</h3>
+<p>경로 이동, 절대경로와 상대 경로로 이동 가능하다.</p>
+
+<h2 id="ls">ls</h2>
+<h3 id="list">(list)</h3>
+<p>디렉토리 목록 확인</p>
+
+<h2 id="cp">cp</h2>
+<h3 id="copy">(copy)</h3>
+<p>파일 혹은 디렉토리를 복사</p>
+
+<p>디렉토리를 복사할때에는 -r 옵션을 주어야함</p>
+
+<h2 id="mv">mv</h2>
+<h3 id="move">(move)</h3>
+<p>파일 혹은 디렉토리를 이동</p>
+
+<p>실제로 원하는 위치로 이동할 때에도 사용하지만, 이름을 변경하는 용도로도 사용</p>
+
+<p>cp와는 달리 디렉토리를 이동할 때에도 별다른 옵션이 필요 없음</p>
+
+<h2 id="mkdir">mkdir</h2>
+<h3 id="make-directory">(make directory)</h3>
+<p>디렉토리 생성</p>
+
+<p>윈도우에서 파일 정리를 위해 새 폴더를 만드는 것처럼 리눅스에서도 새 디렉토리를 생성 하기위해 mkdir 명령어를 사용</p>
+
+<p>-p 옵션을 주면 하위 디렉토리까지 한 번에 생성 가능 .</p>
+
+<h2 id="rm">rm</h2>
+<h3 id="remove">(remove)</h3>
+<p>파일이나 디렉토리를 삭제</p>
+
+<p>디렉토리를 삭제할때는 r 옵션을 주어야 함</p>
+
+<p>-f 옵션을 주면 사용자에게 삭제 여부를 묻지 않고 바로 삭제함</p>
+
+<p>디렉토리를 삭제할 때에는 하위 디렉토리까지 모두 삭제되므로 유의</p>
+
+<h2 id="cat">cat</h2>
+<h3 id="concatenate">(concatenate)</h3>
+<p>파일은 연결하기위해 만들어진 명령어</p>
+
+<p>단순히 파일의 내용을 출력할 수도 있고,</p>
+
+<p>파일 여러개를 합쳐서 하나의 파일로 만들 수도 있음.</p>
+
+<p>그리고 기존 한 파일의 내용을 다른 파일에 덧붙일수도 있음.</p>
+
+<h2 id="grep">grep</h2>
+<p>특정 파일에서 지정한 문자열이나 정규 표현식을 포함한 행을 출력해주는 명령어</p>
+
+<h2 id="vi">vi</h2>
+<p>파일을 편집할때 쓰는 명령어
+리눅스에서 vi 파일명을 입력하면 vi편집상태로 변함</p>
+
+<p>커서 이동을 위해선 h(왼쪽으로) j(아래로) k(위로) l(오른쪽으로)</p>
+
+<p>문자를 삽입 하기 위해서 a(커서 오른쪽에 문자 삽입) A(커서 오른쪽, 행끝에 삽입)<br />
+i(커서 왼쪽에 삽입) I(커서 왼쪽 제일 처음에 삽입) o(커서아래에 행 삽입)<br />
+O(커서 위에 행삽입) ESC(삽입 모드 종료)<br />
+u(이전 명령 취소)</p>
+
+<p>탐색을 하기위한 명령어
+/{검색할문자열} 오른쪽 아래로 문자열 검색
+?{검색할문자열} 왼쪽 위로 문자열 검색</p>
+
+<p>저장을위한 명령어
+:w 변경 사항을 저장
+:W파일명 변경 사항을 파일명으로 저장</p>
+
+<p>종료를 위한 명령어
+:q 편집기가 종료
+:q! 변경된 내용일 있더라돟 저장하지 않고 무조건 종료
+:wq 변경된 내용 저장하고 종류</p>]]></content><author><name>Dong Hyun Lim</name></author><category term="공부" /><category term="리눅스 명령어" /><category term="공부" /><category term="정리" /><summary type="html"><![CDATA[리눅스 명령어 정리]]></summary></entry><entry><title type="html">동동이 블로그</title><link href="http://localhost:4000/%EA%B3%B5%EC%A7%80/2022/09/28/divinggecko.html" rel="alternate" type="text/html" title="동동이 블로그" /><published>2022-09-28T00:00:00+09:00</published><updated>2022-09-28T00:00:00+09:00</updated><id>http://localhost:4000/%EA%B3%B5%EC%A7%80/2022/09/28/divinggecko</id><content type="html" xml:base="http://localhost:4000/%EA%B3%B5%EC%A7%80/2022/09/28/divinggecko.html"><![CDATA[<h1 id="안녕하세요-동동이-블로그입니다">안녕하세요 동동이 블로그입니다.</h1>
 <p>이제부턴 여기서 글을 쓸 예정입니다.
 <img src="../../../../../images/DSC01079.jpg" alt="바다사진" /></p>]]></content><author><name>Dong Hyun Lim</name></author><category term="공지" /><category term="시작" /><category term="공지" /><summary type="html"><![CDATA[안녕하세요 동동이 블로그입니다. 이제부턴 여기서 글을 쓸 예정입니다.]]></summary></entry></feed>
