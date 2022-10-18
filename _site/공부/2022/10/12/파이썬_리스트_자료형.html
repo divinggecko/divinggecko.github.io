@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>파이썬 리스트 자료형 | 이직하고싶은 동동이</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="파이썬 리스트 자료형" />
+<meta name="author" content="Dong Hyun Lim" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="파이썬 리스트 자료형" />
+<meta property="og:description" content="파이썬 리스트 자료형" />
+<link rel="canonical" href="http://localhost:4000/%EA%B3%B5%EB%B6%80/2022/10/12/%ED%8C%8C%EC%9D%B4%EC%8D%AC_%EB%A6%AC%EC%8A%A4%ED%8A%B8_%EC%9E%90%EB%A3%8C%ED%98%95.html" />
+<meta property="og:url" content="http://localhost:4000/%EA%B3%B5%EB%B6%80/2022/10/12/%ED%8C%8C%EC%9D%B4%EC%8D%AC_%EB%A6%AC%EC%8A%A4%ED%8A%B8_%EC%9E%90%EB%A3%8C%ED%98%95.html" />
+<meta property="og:site_name" content="이직하고싶은 동동이" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-12T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="파이썬 리스트 자료형" />
+<meta name="twitter:site" content="@ngzhio" />
+<meta name="twitter:creator" content="@Dong Hyun Lim" />
+<meta name="google-site-verification" content="u4WXQl0Eu66rsQo2kRdCNx" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Dong Hyun Lim"},"dateModified":"2022-10-12T00:00:00+09:00","datePublished":"2022-10-12T00:00:00+09:00","description":"파이썬 리스트 자료형","headline":"파이썬 리스트 자료형","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%EA%B3%B5%EB%B6%80/2022/10/12/%ED%8C%8C%EC%9D%B4%EC%8D%AC_%EB%A6%AC%EC%8A%A4%ED%8A%B8_%EC%9E%90%EB%A3%8C%ED%98%95.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"},"name":"Dong Hyun Lim"},"url":"http://localhost:4000/%EA%B3%B5%EB%B6%80/2022/10/12/%ED%8C%8C%EC%9D%B4%EC%8D%AC_%EB%A6%AC%EC%8A%A4%ED%8A%B8_%EC%9E%90%EB%A3%8C%ED%98%95.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="이직하고싶은 동동이" />
+
+
+
+
+
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open%20Sans|Roboto|Roboto%20Slab|Inconsolata|Dancing%20Script|Noto%20Sans%20SC|Noto%20Sans%20TC|Noto%20Serif%20SC|Noto%20Serif%20TC|Ma%20Shan%20Zheng">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/skin.css">
+
+<!-- Begin selecting skin -->
+
+  <script>
+    const hour = (new Date()).getHours();
+    let filename = "";
+    if (hour >= 5 && hour < 7) {
+      filename = "/assets/css/skin-sunrise.css";
+    } else if (hour >= 7 && hour < 17) {
+      filename = "/assets/css/skin-daylight.css";
+    } else if (hour >= 17 && hour < 19) {
+      filename = "/assets/css/skin-sunset.css";
+    } else {
+      filename = "/assets/css/skin-midnight.css";
+    }
+    const elem = document.createElement("link");
+    elem.setAttribute("rel", "stylesheet");
+    elem.setAttribute("type", "text/css");
+    elem.setAttribute("href", filename);
+    document.getElementsByTagName("head")[0].appendChild(elem);
+  </script>
+
+<!-- End selecting skin -->
+
+<script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+  </head>
+
+  <body>
+    <div class="site-container">
+      <header class="site-header">
+        <div class="wrapper">
+  <script>
+    function clickSidebarButton() {
+      const elem = document.getElementById("site-sidebar")
+      if (elem.style.display == "none" || elem.style.display == "") {
+        elem.style.display = "block";
+      } else {
+        elem.style.display = "none";
+      }
+    }
+  </script>
+  <a class="site-sidebar-button" onclick="clickSidebarButton()"><i class="far fa-user"></i>
+  </a>
+
+  <a class="site-title" rel="author" href="/">이직하고싶은 동동이</a>
+
+  
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger" title="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+          </svg>
+        </span>
+      </label>
+
+      <ul class="trigger">
+              <li><a class="" href="/about/">About</a></li>
+            
+              <li><a class="" href="/years/">Years</a></li>
+            
+              <li><a class="" href="/categories/">Categories</a></li>
+            
+              <li><a class="" href="/tags/">Tags</a></li>
+            
+              <li class="dropdown" href="#">
+                <a href="javascript:void(0)" class="dropbtn">More</a>
+                <div class="dropdown-content">
+                    <a class="" href="/faq/">FAQ</a>
+                    <a class="" href="/docs/">Docs</a>
+                </div>
+              </li>
+            </ul>
+    </nav>
+  
+</div>
+
+      </header>
+      
+      <div class="site-body wrapper">
+        <aside class="site-sidebar" id="site-sidebar">
+          
+            <div class="sidebar-section"><img src="/logo.png" class="author-avatar u-photo align-center" alt="Dong Hyun Lim">
+  </div>
+
+<div class="sidebar-section">
+  <ul class="contact-list">
+    <li>
+        <i class="sidebar-icon fas fa-at"></i>
+        <span class="contact-info p-name">Dong Hyun Lim</span>
+      </li>
+    <li>
+        <i class="sidebar-icon fas fa-envelope"></i>
+        <a class="contact-info u-email" href="mailto:oo1029518@gmail.com">oo1029518@gmail.com</a>
+      </li>
+    
+  </ul>
+</div>
+
+<div class="sidebar-section feed-subscribe">
+  <a href="/feed.xml">
+    <i class="sidebar-icon fas fa-rss"></i><span>Subscribe</span>
+  </a>
+</div>
+
+<div class="sidebar-section">
+    <ul class="social-icons">
+      <li>
+          <a class="social-icon" href="https://instagram.com/klj1029/"><i class="fas fa-link fa-2x" title="Instagram"></i></a>
+        </li><li>
+          <a class="social-icon" href="https://github.com/divinggecko"><i class="fab fa-github fa-2x" title="GitHub"></i></a>
+        </li>
+    </ul>
+  </div>
+
+          
+        </aside>
+        <main class="site-main" id="site-main" aria-label="Content" tabindex="1">
+          <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+
+    <h1 class="post-title p-name" itemprop="name headline">파이썬 리스트 자료형</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2022-10-12T00:00:00+09:00" itemprop="datePublished">
+        Oct 12, 2022
+      </time></p>
+
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="파이썬-리스트-자료형">파이썬 리스트 자료형</h1>
+
+<p>이전에 배운 숫자형과 문자열만으론 프로그래밍 하기엔 부족한게 많다.<br />
+집합을 만들거나 그런 표현을 하기엔 숫자형이나 문자형으로만 표현이 어렵다.<br />
+그렇기에 우리는 자료형을 통해 표현하여 불편함을 해소하고 리스트를 만들어<br />
+사용하면 좀더 편안하게 사용이 가능하다.
+이제 리스트를 만들고 사용해보자.</p>
+
+<h2 id="리스트-만드는법">리스트 만드는법</h2>
+
+<p>만약 숫자 모음을 만들고 싶다 그럼 우리는 리스트를 통해 표현이 가능하다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [1, 3, 5, 7, 9]
+</code></pre></div></div>
+<p>이런 방식으로 대괄호를 감싸고 각 요소값을 ,로 구분해 준다.</p>
+
+<p>여러가지 리스트를 한번 만들어 보자</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = []
+q = [1, 2, 3]
+d = ['I', 'Love', 'You']
+r = [2, 3, 'SCUBA', diving']
+t = [5, 2, 'SCUBA', [4, 2]]
+</code></pre></div></div>
+<p>이러한 방식으로 리스트들을 만들수 있다.<br />
+요소값을 비워서 만들거나, 혹은 숫자열, 문자열, 요소값 안에 <br />
+리스트를 만들어 리스트 자체를 요소값으로도 만들수 있다.</p>
+
+<h2 id="리스트의-인덱싱과-슬라이싱">리스트의 인덱싱과 슬라이싱</h2>
+<p>리스트도 이전 문자열에서 했던것처럼 인덱싱과 슬라이싱이 가능하다.
+하나씩 차근히 만들어가면서 배워보자.</p>
+
+<h3 id="리스트-인덱싱">리스트 인덱싱</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [5, 6, 7]
+a 
+[5, 6, 7]
+
+a[0]
+5
+</code></pre></div></div>
+<p>이것처럼 먼저 a에 변수값을 설정하고 a[0] a에 0 즉 첫번째 요소값인 5가 나온것이다.</p>
+
+<p>이번에 요소값들은 더해 보자</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [5, 6, 7]
+a[0] + a[2]
+12
+</code></pre></div></div>
+<p>이렇게 a[0]에 값인 5와 a[2] 값인 7이 더해져 12가 나오게 된다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [3, 4, 5, ['b', 'c', 'd']]
+a[0]
+3
+a[-1]
+['b', 'c', 'd']
+a[3]
+['b', 'c', 'd']
+</code></pre></div></div>
+
+<p>이렇게 리스트안에 요소값으로 리스트를 만들고 a[-1] 또는 a[3]으로 그 리스트를 결과 값으로 가져올 수 있다.<br />
+자 그럼 [3, 4, 5, [‘b’, ‘c’, ‘d’]] 이안에서 만약 c값만 인덱싱을 하고싶다면 어떻게 해야할까?</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [3, 4, 5, ['b', 'c', 'd']]
+a[-1][1]
+'c'
+</code></pre></div></div>
+<p>이런 방식으로 a[-1]에서 두번째인 [1] 로 인덱싱을 하면 ‘c’값을 끄집어 낼수 있다.</p>
+
+<blockquote>
+  <h3 id="삼중-리스트-인덱싱">삼중 리스트 인덱싱</h3>
+  <p>삼중 리스트는 자주 쓰이진 않지만 알아 두면 좋기 때문에 한번 알아보도록 하자.</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [2, 3, ['b', 'c', ['Love', 'SCUBA']]] 
+</code></pre></div>  </div>
+  <p>이러한 방식으로 삼중으로 리스트를 만들었다 그럼 우리가 만약 ‘Love’ 문자열만 끄집어내고 싶다면 어떻게 해야할까?</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a[2][2][0]
+'Love'
+</code></pre></div>  </div>
+  <p>이렇게 위에서 배운것처럼 a[2] 값인 [‘b’, ‘c’, [‘Love’, ‘SCUBA’]] 이 안에서 또 a[2][2] 값 <br />
+[‘Love’, ‘SCUBA’] 가져오고 여기서 첫번째 a[2][2][0]으로 가져오면 ‘Love’ 가 나오게된다.</p>
+</blockquote>
+
+<h3 id="리스트-슬라이싱">리스트 슬라이싱</h3>
+<p>리스트 슬라이싱 말그대로 문자를 나누는 방법이다. 저번 문자열 자료형에서 배웠듯이 리스트도 슬라이싱이 가능하다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [1, 2, 3, 4, 5]
+a[0:2]
+[1, 2]
+</code></pre></div></div>
+<p>이렇게 슬라이싱이 되어 나온다. 문자열과 같은 방식으로 슬라이싱이 된다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [1, 2, 3, 4, 5]
+b = a[:3]
+c = a[1:4]
+b
+[1, 2, 3]
+c
+[2, 3, 4] 
+</code></pre></div></div>
+<p>문자열처럼 여러 방식대로 슬라이싱을 해봤다. 이러한 방식으로 슬라이싱이 가능하다.</p>
+
+<blockquote>
+  <h3 id="중첩된-리스트-슬라이싱">중첩된 리스트 슬라이싱</h3>
+  <p>이번엔 응용을 해서 중접된 리스트를 슬라이싱 해보자.</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a= [1, 2, 3, ['b', 'c', 'd'], 4]
+a[1:]
+[2, 3, ['b', 'c', 'd'], 4]
+a[3][:2]
+['b', 'c']
+</code></pre></div>  </div>
+  <p>이러한 방식으로도 슬라이싱이 가능하다.
+첫번째는 그냥 리스트를 슬라이싱 한것 이고 두번째는 a[3][:2] a에4번째 값을 [0:2]로 슬라이싱 한것<br />
+즉 [‘b’, ‘c’]가 된다.</p>
+</blockquote>
+
+<h2 id="리스트-연산">리스트 연산</h2>
+<p>리스트도 문자열 숫자열과 같이 +는 더하기 *는 반복하기로 동일하다. <br />
+한번씩 써보면서 배워보자.</p>
+
+<h3 id="리스트-더하기-">리스트 더하기 +</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [1, 2, 3]
+b = [4, 5, 6]
+a + b
+[1, 2, 3, 4, 5, 6]
+</code></pre></div></div>
+<p>이러한 방식으로 더하면 리스트가 합쳐진다.</p>
+
+<h3 id="리스트-반복-">리스트 반복 *</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [2, 5, 6]
+a * 4
+[2, 5, 6, 2, 5, 6, 2, 5, 6, 2, 5, 6]
+</code></pre></div></div>
+<p>이렇게 리스트에 * 4 를 하면 리스트가 4번 반복이 된다.</p>
+
+<h3 id="리스트-길이구하기">리스트 길이구하기</h3>
+<p>이번엔 리스트의 길이를 한번 구해보자.<br />
+리스트의 길이를 구하는 방법은 len 함수를 이용하면 구할 수 있다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [1, 2, 3, 4, 5]
+len(a)
+5
+</code></pre></div></div>
+<p>이렇게 리스트의 길이를 구할 수 있다.</p>
+
+<blockquote>
+  <h3 id="리스트-연산-오류">리스트 연산 오류</h3>
+  <p>리스트에서 값을 끄집어내서 문자열과 더하려고 한다 그럼 어떻게 해야할까?</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [1, 2, 3]
+a[2] + "hello"
+</code></pre></div>  </div>
+  <p>이렇게 생각을 할것 이다.
+근데 이렇게하면 오류가 나게된다.<br />
+문자열과 정수을 더하는건 불가능하다. 그래서 우린 정수를 문자열로 만들어 주어야 한다.</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> a = [1, 2, 3]
+str(a[2]) + "hello"
+'3hello' 
+</code></pre></div>  </div>
+  <p>이렇게 str 함수를 이용하여 3을 문자열로 만들어주면 가능하다.</p>
+</blockquote>
+
+<h2 id="리스트의-수정과-삭제">리스트의 수정과 삭제</h2>
+
+<h3 id="리스트에서-값-수정">리스트에서 값 수정</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [1, 2, 3]
+a[2] = 4
+a
+[1, 2, 4]
+</code></pre></div></div>
+<p>이렇게 리스트 값을 수정할 수 있다.</p>
+
+<h3 id="리스트-요소-삭제">리스트 요소 삭제</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [1, 2, 3, 4]
+del a[1]
+a
+[1, 3, 4]
+</code></pre></div></div>
+<p>del 함수를 이용하면 리스트의 요소를 삭제할 수 있다.
+del 함수는 del 뒤에 삭제할 요소를 (우린 리스트에서 두번째 값을 삭제하기 위해 a[1]을 넣은것)<br />
+넣어주면 삭제가 가능하다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [1, 2, 3, ['a', 'b'] , 4]
+del a[:3]
+a
+[['a', 'b'], 4]
+</code></pre></div></div>
+<p>이렇게 슬라이싱 기법으로 여러 개도 삭제가 가능하다.</p>
+
+<h2 id="리스트-관련-함수들">리스트 관련 함수들</h2>
+<p>문자열에서도 썻듯이 리스트 변수 뒤 .함수 이런방식으로 사용이 가능하다.<br />
+자주 사용되는 함수들을 한번 보자.</p>
+
+<h3 id="append-리스트에-요소-추가">append 리스트에 요소 추가</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [5, 6, 7, 8]
+a.append(9)
+a
+[5, 6, 7, 8, 9]
+</code></pre></div></div>
+<p>이 함수를 사용시 리스트 맨 마지막에 값을 추가해 준다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [5, 6, 7, 8]
+a.append(['a', 'b'])
+a
+[5, 6, 7, 8, ['a', 'b']]
+</code></pre></div></div>
+<p>이렇게 리스트도 추가할 수 있다.</p>
+
+<h3 id="sort-리스트-정렬">sort 리스트 정렬</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [5, 6, 2, 1]
+a.sort()
+a = [1, 2, 5, 6] 
+</code></pre></div></div>
+<p>이런 방식으로 순서대로 정리를 해준다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = ['하', '나', '강', '대']
+a.sort()
+['강', '나', '대', '하']
+</code></pre></div></div>
+<p>영문은 영문 알파벳순으로 한글도 순서대로 정렬해준다.</p>
+
+<h3 id="reverse-리스트-뒤집기">reverse 리스트 뒤집기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = ['a', 'd', 'b', 'c']
+a.reverse()
+a
+['c', 'b', 'd', 'a']
+</code></pre></div></div>
+<p>reverse는 현재에 리스트를 역순으로 바꿔준다. 말그대도 뒤집어 주는거다.</p>
+
+<h3 id="index-위치-반환">index 위치 반환</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [5, 6, 7]
+a.index(7)
+2
+a.index(5)
+0
+</code></pre></div></div>
+<p>index는 리스트의 값의 자리를 반환해준다. 7을 넣었으니 리스트에서 7의 자리인 2를 돌려주고<br />
+두번짼 5의 자리인 0을 돌려주게된다. 만약 리스트에 존재하지 않는 숫자를 넣는다면 오류가 발생한다.</p>
+
+<h3 id="insert-리스트에-요소-삽입">insert 리스트에 요소 삽입</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [5, 6, 7]
+a.insert(3,1)
+a
+[5, 6, 7, 1]
+</code></pre></div></div>
+<p>insert(a,b)로 a는 삽입할 위치, b는 삽입할 요소로 a자리에 b를 넣는 함수라고 보면된다.<br />
+위에 처럼 3자리(4번째)에 1을 삽입 하는것이다.</p>
+
+<h3 id="remove-리스트-요소-제거">remove 리스트 요소 제거</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [5, 4, 3, 5, 4, 3]
+a.remove(5)
+a
+[4, 3, 5, 4, 3] 
+</code></pre></div></div>
+<p>remove(5)는 5란 숫자를 제거한 것이다. 5를 전부 삭제하는 것이 아닌 같은 값이 여러개면<br />
+앞에있는게 먼저 제거된다.</p>
+
+<h3 id="pop-리스트-요소-끄집어내기">pop 리스트 요소 끄집어내기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [1, 2, 3]
+a.pop()
+3
+a
+[1, 2]
+</code></pre></div></div>
+<p>pop() 아무것도 넣지 않는다면 맨마지막 숫자를 꺼내고 삭제한다.<br />
+그래서 a는 1, 2 만 남게 된다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [1, 2, 3]
+a.pop(0)
+1
+a
+[2, 3]
+</code></pre></div></div>
+<p>pop()에 자리 수를 넣어주면 그 자리에 있는 값을 꺼내고 삭제 한다. 
+0 은 1번자리니 1을 꺼내오고 삭제해서 2와 3만 남게 된다.</p>
+
+<h3 id="count-리스트에-포함된-요소의-갯수-세기">count 리스트에 포함된 요소의 갯수 세기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [2, 3, 2, 4, 2, 5]
+a.count(2)
+3
+</code></pre></div></div>
+<p>이런식으로 2를 넣으면 리스트에 있는 2의 갯수를 알려준다.</p>
+
+<h3 id="extend-리스트-확장">extend 리스트 확장</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = [12, 13, 14, 15]
+a.extend([16, 17])
+a
+[12, 13, 14, 15, 16, 17]
+b = [18, 19]
+a.extend(b)
+a
+[12, 13, 14, 15, 16, 17, 18, 19]
+</code></pre></div></div>
+<p>이렇게 extend()에 더할 리스트를 넣어주면 a+(추가할 리스트)로 계산이되어 추가가 된다.</p>
+
+<p>이 포스팅은 점프투 파이썬을 보고 정리한 자료입니다.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    
+      <div class="post-meta">
+        <i class="fas fa-folder"></i>
+        <ul class="post-taxonomies post-categories">
+          
+          
+            <li class="post-category">
+              
+              <a href="/categories/#%EA%B3%B5%EB%B6%80">공부</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+
+    
+      <div class="post-meta">
+        <i class="fas fa-tags"></i>
+        <ul class="post-taxonomies post-tags">
+          
+          
+            <li class="post-tag">
+              
+              <a href="/tags/#%EA%B3%B5%EB%B6%80">공부</a>
+            </li>
+          
+            <li class="post-tag">
+              
+              <a href="/tags/#%EB%A6%AC%EC%8A%A4%ED%8A%B8">리스트</a>
+            </li>
+          
+            <li class="post-tag">
+              
+              <a href="/tags/#%EC%A0%95%EB%A6%AC">정리</a>
+            </li>
+          
+            <li class="post-tag">
+              
+              <a href="/tags/#%ED%8C%8C%EC%9D%B4%EC%8D%AC">파이썬</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+
+    <nav class="post-pagination" role="navigation">
+      
+        <a class="post-previous" href="/%EA%B3%B5%EB%B6%80/2022/10/09/%ED%8C%8C%EC%9D%B4%EC%8D%AC_%EB%AC%B8%EC%9E%90%EC%97%B4_%EC%9E%90%EB%A3%8C%ED%98%95.html">
+          <h4 class="post-pagination-label">Prev</h4>
+          <span class="post-pagination-title">
+            <i class="fas fa-arrow-left"></i> 파이썬 문자열 자료형
+
+          </span>
+        </a>
+      
+
+      
+        <a class="post-next" href="/%EA%B3%B5%EB%B6%80/2022/10/15/%ED%8C%8C%EC%9D%B4%EC%8D%AC_%ED%8A%9C%ED%94%8C_%EC%9E%90%EB%A3%8C%ED%98%95.html">
+          <h4 class="post-pagination-label">Next</h4>
+          <span class="post-pagination-title">
+            파이썬 튜플 자료형
+ <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+      
+    </nav>
+  </footer>
+
+  
+  <script src="https://utteranc.es/client.js"
+        repo="divinggecko/divinggecko.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+  </script>
+  
+</article>
+
+          <footer class="site-footer">
+            <div class="footer-col-wrapper">
+
+  <div class="footer-col">
+    <div class="copyright">
+      
+      
+      
+      
+      <p>Copyright © 2022 Dong Hyun Lim; All rights reserved.</p>
+      
+    </div>
+    <p>
+      Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://github.com/ngzhio/jekyll-theme-hamilton">Hamilton</a>
+    </p>
+  </div>
+
+  <div class="footer-col">
+    <p>이직을 위한 한걸음 코딩 배우기</p>
+  </div>
+</div>
+
+          </footer>
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>파이썬 딕셔너리 자료형 | 이직하고싶은 동동이</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="파이썬 딕셔너리 자료형" />
+<meta name="author" content="Dong Hyun Lim" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="딕셔너리 자료형 딕셔너리는 뜻 그대로 해석하면 사전이란 의미이다. 대응관계를 나타내는 자료형으로 key : value 형태로 쓰인다. 리스트형이나 튜플과는 다르게 순차적으로 요소값을 구하는게 아닌 Kye를 통해 Velue를 얻는형태이다." />
+<meta property="og:description" content="딕셔너리 자료형 딕셔너리는 뜻 그대로 해석하면 사전이란 의미이다. 대응관계를 나타내는 자료형으로 key : value 형태로 쓰인다. 리스트형이나 튜플과는 다르게 순차적으로 요소값을 구하는게 아닌 Kye를 통해 Velue를 얻는형태이다." />
+<link rel="canonical" href="http://localhost:4000/%EA%B3%B5%EB%B6%80/2022/10/16/%ED%8C%8C%EC%9D%B4%EC%84%A0_%EB%94%95%EC%85%94%EB%84%88%EB%A6%AC_%EC%9E%90%EB%A3%8C%ED%98%95.html" />
+<meta property="og:url" content="http://localhost:4000/%EA%B3%B5%EB%B6%80/2022/10/16/%ED%8C%8C%EC%9D%B4%EC%84%A0_%EB%94%95%EC%85%94%EB%84%88%EB%A6%AC_%EC%9E%90%EB%A3%8C%ED%98%95.html" />
+<meta property="og:site_name" content="이직하고싶은 동동이" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-10-16T00:10:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="파이썬 딕셔너리 자료형" />
+<meta name="twitter:site" content="@ngzhio" />
+<meta name="twitter:creator" content="@Dong Hyun Lim" />
+<meta name="google-site-verification" content="u4WXQl0Eu66rsQo2kRdCNx" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Dong Hyun Lim"},"dateModified":"2022-10-16T00:10:00+09:00","datePublished":"2022-10-16T00:10:00+09:00","description":"딕셔너리 자료형 딕셔너리는 뜻 그대로 해석하면 사전이란 의미이다. 대응관계를 나타내는 자료형으로 key : value 형태로 쓰인다. 리스트형이나 튜플과는 다르게 순차적으로 요소값을 구하는게 아닌 Kye를 통해 Velue를 얻는형태이다.","headline":"파이썬 딕셔너리 자료형","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%EA%B3%B5%EB%B6%80/2022/10/16/%ED%8C%8C%EC%9D%B4%EC%84%A0_%EB%94%95%EC%85%94%EB%84%88%EB%A6%AC_%EC%9E%90%EB%A3%8C%ED%98%95.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/logo.png"},"name":"Dong Hyun Lim"},"url":"http://localhost:4000/%EA%B3%B5%EB%B6%80/2022/10/16/%ED%8C%8C%EC%9D%B4%EC%84%A0_%EB%94%95%EC%85%94%EB%84%88%EB%A6%AC_%EC%9E%90%EB%A3%8C%ED%98%95.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="이직하고싶은 동동이" />
+
+
+
+
+
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open%20Sans|Roboto|Roboto%20Slab|Inconsolata|Dancing%20Script|Noto%20Sans%20SC|Noto%20Sans%20TC|Noto%20Serif%20SC|Noto%20Serif%20TC|Ma%20Shan%20Zheng">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/skin.css">
+
+<!-- Begin selecting skin -->
+
+  <script>
+    const hour = (new Date()).getHours();
+    let filename = "";
+    if (hour >= 5 && hour < 7) {
+      filename = "/assets/css/skin-sunrise.css";
+    } else if (hour >= 7 && hour < 17) {
+      filename = "/assets/css/skin-daylight.css";
+    } else if (hour >= 17 && hour < 19) {
+      filename = "/assets/css/skin-sunset.css";
+    } else {
+      filename = "/assets/css/skin-midnight.css";
+    }
+    const elem = document.createElement("link");
+    elem.setAttribute("rel", "stylesheet");
+    elem.setAttribute("type", "text/css");
+    elem.setAttribute("href", filename);
+    document.getElementsByTagName("head")[0].appendChild(elem);
+  </script>
+
+<!-- End selecting skin -->
+
+<script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+  </head>
+
+  <body>
+    <div class="site-container">
+      <header class="site-header">
+        <div class="wrapper">
+  <script>
+    function clickSidebarButton() {
+      const elem = document.getElementById("site-sidebar")
+      if (elem.style.display == "none" || elem.style.display == "") {
+        elem.style.display = "block";
+      } else {
+        elem.style.display = "none";
+      }
+    }
+  </script>
+  <a class="site-sidebar-button" onclick="clickSidebarButton()"><i class="far fa-user"></i>
+  </a>
+
+  <a class="site-title" rel="author" href="/">이직하고싶은 동동이</a>
+
+  
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger" title="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+          </svg>
+        </span>
+      </label>
+
+      <ul class="trigger">
+              <li><a class="" href="/about/">About</a></li>
+            
+              <li><a class="" href="/years/">Years</a></li>
+            
+              <li><a class="" href="/categories/">Categories</a></li>
+            
+              <li><a class="" href="/tags/">Tags</a></li>
+            
+              <li class="dropdown" href="#">
+                <a href="javascript:void(0)" class="dropbtn">More</a>
+                <div class="dropdown-content">
+                    <a class="" href="/faq/">FAQ</a>
+                    <a class="" href="/docs/">Docs</a>
+                </div>
+              </li>
+            </ul>
+    </nav>
+  
+</div>
+
+      </header>
+      
+      <div class="site-body wrapper">
+        <aside class="site-sidebar" id="site-sidebar">
+          
+            <div class="sidebar-section"><img src="/logo.png" class="author-avatar u-photo align-center" alt="Dong Hyun Lim">
+  </div>
+
+<div class="sidebar-section">
+  <ul class="contact-list">
+    <li>
+        <i class="sidebar-icon fas fa-at"></i>
+        <span class="contact-info p-name">Dong Hyun Lim</span>
+      </li>
+    <li>
+        <i class="sidebar-icon fas fa-envelope"></i>
+        <a class="contact-info u-email" href="mailto:oo1029518@gmail.com">oo1029518@gmail.com</a>
+      </li>
+    
+  </ul>
+</div>
+
+<div class="sidebar-section feed-subscribe">
+  <a href="/feed.xml">
+    <i class="sidebar-icon fas fa-rss"></i><span>Subscribe</span>
+  </a>
+</div>
+
+<div class="sidebar-section">
+    <ul class="social-icons">
+      <li>
+          <a class="social-icon" href="https://instagram.com/klj1029/"><i class="fas fa-link fa-2x" title="Instagram"></i></a>
+        </li><li>
+          <a class="social-icon" href="https://github.com/divinggecko"><i class="fab fa-github fa-2x" title="GitHub"></i></a>
+        </li>
+    </ul>
+  </div>
+
+          
+        </aside>
+        <main class="site-main" id="site-main" aria-label="Content" tabindex="1">
+          <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+
+    <h1 class="post-title p-name" itemprop="name headline">파이썬 딕셔너리 자료형</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2022-10-16T00:10:00+09:00" itemprop="datePublished">
+        Oct 16, 2022
+      </time></p>
+
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="딕셔너리-자료형">딕셔너리 자료형</h1>
+<p>딕셔너리는 뜻 그대로 해석하면 사전이란 의미이다.
+대응관계를 나타내는 자료형으로 key : value 형태로 쓰인다.
+리스트형이나 튜플과는 다르게 순차적으로 요소값을 구하는게 아닌 Kye를 통해 Velue를 얻는형태이다.</p>
+
+<h2 id="딕셔너리-만들기">딕셔너리 만들기</h2>
+
+<p>기본적인 형태를 먼저 보자</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> {Key1:Value1, Key2:Value2, Key3:Value3, ...} 
+</code></pre></div></div>
+<p>이게 기본 딕셔너리의 형태이다.<br />
+구분은 ,로 되어있고 Key : value 형태로 쌍으로 되어있다.<br />
+여기서 가장 중요한 사실은 Key 값은 변할 수 없고 velue는 변하는 값, 변하지 않는값 모두 입력이 가능하다.</p>
+
+<p>이제 그러면 여러 형태의 딕셔너리를 만들어보자</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dic = {'name' : 'Dong', 'phone' : '01080143930', 'birth' : '940623'}
+
+a = {1 : 'hello'}
+
+a = {'a' : [1, 2, 3]}
+</code></pre></div></div>
+
+<p>이렇게 만들 수 있다.</p>
+
+<h2 id="딕셔너리-쌍-추가">딕셔너리 쌍 추가</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = {1 : 'a'}
+a[2] = 'b'
+a
+{1: 'a', 2: 'b'}
+</code></pre></div></div>
+
+<p>이렇게 딕셔너리 쌍을 추가 할 수 있다.<br />
+a[2] = ‘b’ 이렇게 입력은 a 인 {1 : ‘a’} 여기에 2 : ‘b’인 쌍을 추가하는 것이다.</p>
+
+<p>또 다른 값을 추가해보자</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a['name'] = 'Dong'
+a
+{1: 'a', 2: 'b', 'name': 'Dong'}
+</code></pre></div></div>
+<p>이렇게 ‘name’: ‘Dong’ 쌍이 추가된다.
+변수[추가할 kye] = 추가할 value 이러한 방식으로 추가하면 쌍이 추가가 된다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a[3] = [1, 2, 3]
+a
+{1: 'a', 2: 'b', 'name': 'Dong', 3: [1, 2, 3]}
+</code></pre></div></div>
+<p>이렇게 value는 리스트도 추가가 가능하다.</p>
+
+<h3 id="딕셔너리-요소-삭제">딕셔너리 요소 삭제</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>del a[1]
+a
+{2: 'b', 'name': 'Dong', 3: [1, 2, 3]}
+</code></pre></div></div>
+<p>전에 배운 del 함수를 이용하면 del a[key] 형태로 입력을 하면 그에 해당하는 <br />
+key와 value 쌍이 없어지게된다.</p>
+
+<h2 id="딕셔너리-사용방법">딕셔너리 사용방법</h2>
+<p>그렇다면 이런 딕셔너리를 어디에 사용을 할까 생각 할수 있다.
+만약 동물의 어미의 이름과 새끼의 이름을 표현 하고 싶다.
+리스트나 문자열에선 표현하기가 힘든걸 ‘소’ : ‘송아지’ 이러한 방식을 쓰면 아주 편하게 표현이 가능하다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{'소' : '송아지', '말' : '망아지', '개' : '강아지'} 
+</code></pre></div></div>
+<p>이런 식으로 사용도 가능 하다.</p>
+
+<h3 id="딕셔너리-key-사용해-value-얻기">딕셔너리 key 사용해 value 얻기</h3>
+
+<p>딕셔너리는 리스트나 튜플과 다르게 요소값을 얻을때 인덱싱이나 슬라이싱 기법을 사용하는게 아닌<br />
+오직 Key 를 사용해 value를 구하는 방법 뿐이다.
+Key에 value를 얻기 위해선 딕셔너리변수이름[kye]를 넣으면 value를 구할 수 있다.<br />
+한번 예시로 보자.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = {1 : 'a', 2 : 'b'}
+a[1]
+'a'
+a[2]
+'b'
+</code></pre></div></div>
+<p>이런 방식으로 key 값을 입력하면 value 값을 돌려주게 된다.
+리스트나 튜플에 경우엔 a[1] 이렇게 입력하면 2번째 있는 값을 돌려주지만 딕셔너리에선<br />
+1이 key값을 이야기 하기에 value 값인 ‘a’를 돌려주게된다.<br />
+만약 a[2]를 입력하면 value 값인 ‘b’를 돌려주게 된다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>특기 = {'동현' : 'SCUBA', '승윤' : '코딩'}
+특기['동현']
+'SCUBA'
+</code></pre></div></div>
+<p>이러한 방식으로 딕셔너리변수[key] 로 입력하여 SCUBA란 value를 얻을 수 있다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dic = {'name' : 'Dong', 'phone' : '01080143930', 'birth' : '940623'}
+dic['name']
+'Dong'
+dic['phone']
+'01080143930'
+dic['birth']
+'940623'
+</code></pre></div></div>
+<p>이런 방식으로도 구할 수 있다.</p>
+
+<h3 id="딕셔너리-만들때-주의할-사항">딕셔너리 만들때 주의할 사항</h3>
+
+<p>만약 키값이 동일하고 value 값은 다른 쌍들은 여러개 만든다면 어떻게 될까</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = {1 : 'a', 1 : 'b', 1 : 'c'}
+a[1]
+'c'
+</code></pre></div></div>
+<p>이렇게 앞에 있던 쌍들은 무시되고 마지막 쌍만 남게된다.</p>
+
+<p>자 그리고 아까 이야기 했듯이 key값은 변화하지 못하는 값이라고 했다.<br />
+그것처럼 key 값에 리스트는 사용이 불가는 하다. 하지만 튜플은 사용할 수 있다.<br />
+그럼 한번 key 값에 리스트를 넣어보자.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = {[1, 2] : 'hi'}
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: unhashable type: 'list'
+</code></pre></div></div>
+<p>이런 방식으로 오류가 나게된다.</p>
+
+<p>그럼 한번 튜플을 넣어보자</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = {(1, 2) : 'hi'}
+a[(1, 2)]
+'hi'
+</code></pre></div></div>
+<p>튜플은 가능하다는걸 알 수 있다.
+그리고 value 값은 아무거나 넣을 수 있다.</p>
+
+<h2 id="딕셔너리-관련-함수들">딕셔너리 관련 함수들</h2>
+<p>딕셔너리를 더욱 잘 활용 하기위해 딕셔너리의 함수들을 사용해보자.</p>
+
+<h3 id="key-리스트-만들기">key 리스트 만들기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = {'name' : 'Dong', 'phone' : '01080143930', 'birth' : '940623'}
+a.keys()
+dict_keys(['name', 'phone', 'birth'])
+</code></pre></div></div>
+<p>a.keys 는 Kye 값만을 모아서 dict_keys 객체을 돌려준다.
+dict_keys 객체를 사용하는 방법은 리스트를 사용하는 것과 차이가 없지만 리스트 고유 함수는 수행이 불가능 하다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for k in a.keys():
+    print(k)
+    
+name
+phone
+birth    
+</code></pre></div></div>
+<blockquote>
+  <p>print(k)를 입력할 때 들여쓰기를 꼭 해야한다. 아니면 오류가 발생하니 주의 해야한다.</p>
+</blockquote>
+
+<p>dict_keys 객체를 만약 리스트로 변환 하고 싶다면?</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list(a.keys())
+['name', 'phone', 'birth']
+</code></pre></div></div>
+<p>이런 방식으로 하면 된다.</p>
+
+<h3 id="value-리스트-만들기">value 리스트 만들기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a.values()
+dict_values(['Dong', '01080143930', '940623'])
+</code></pre></div></div>
+
+<p>key를 얻는것과 마찬가지로 values 함수를 이용하면 dict_values 객체를 돌려준다.</p>
+
+<h3 id="key-value-쌍-얻기">key, value 쌍 얻기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a.items()
+dict_items([('name', 'Dong'), ('phone', '01080143930'), ('birth', '940623')])
+</code></pre></div></div>
+<p>.items 함수를 이용하면 Key와 value 쌍을 튜플로 묶어서 dict_items 객체로 돌려주게 된다.<br />
+이것도 dict_values, dict_items, dict_keys 객체랑 같게 리스트를 사용하는 것과 동일하게 사용 가능하다.</p>
+
+<h3 id="key-value-쌍-모두-지우기">Key: Value 쌍 모두 지우기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a.clear()
+a
+{}
+</code></pre></div></div>
+<p>clear 함수는 딕셔너리 요소들은 전부 삭제한다. 빈 리스트는 []로 빈 튜플은 (), 빈 딕셔너리는 감싸고있는
+{}로 표현이 된다</p>
+
+<h3 id="key로-value얻기">Key로 Value얻기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = {'name' : 'Dong', 'phone' : '01080143930', 'birth' : '940623'}
+a.get('name')
+'dong'
+a.get('phone')
+'01080143930'
+</code></pre></div></div>
+<p>이전엔 우리는 함수가 아닌 a[]로 value 값을 구했다.<br />
+이번엔 같은 value 값을 구하는 방법을 알아봤다.<br />
+왜 같은 값을 구하는데 방법이 두가지 인지 의문이 들것이다.<br />
+a.get 과 a[]로 구하면 차이점이 있는데 바로 a[]에서 없는 key값을 넣으면 오류가 발생을 한다.<br />
+하지만 a.get 에서 없는 값을 넣는다면 오류가 아닌 None라는 값을 돌려준다.<br />
+어떤 걸 사용하는지는 본인의 선택이다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = {'name' : 'Dong', 'phone' : '01080143930', 'birth' : '940623'}
+a.get('zz')
+None
+a['kk']
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+KeyError: 'nokey'
+
+</code></pre></div></div>
+<p>만약 딕셔너리안에 없는 Key값을 디폴트 값을 대신 가져오게 하고 싶다면<br />
+get(x, 디폴트 값)을 사용하면 된다.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a.get('KK', 'hello')
+'hello'
+</code></pre></div></div>
+<p>a 딕셔너리엔 KK 값이 없다 그러므로 hello 값을 돌려준다.</p>
+
+<h3 id="key가-딕셔너리-안에-있는지-확인-하기">Key가 딕셔너리 안에 있는지 확인 하기</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = {'name' : 'Dong', 'phone' : '01080143930', 'birth' : '940623'}
+'name' in a
+True
+'email' in a
+False
+</code></pre></div></div>
+<p>이러한 방식으로 ‘key’ in 변수 형태로 입력을 하면 만약 key값이 있다면 True로 값을 돌려주고<br />
+없다면 False로 값을 돌려준다.</p>
+
+<p>이 포스팅은 점프투 파이썬을 보고 정리한 자료입니다.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    
+      <div class="post-meta">
+        <i class="fas fa-folder"></i>
+        <ul class="post-taxonomies post-categories">
+          
+          
+            <li class="post-category">
+              
+              <a href="/categories/#%EA%B3%B5%EB%B6%80">공부</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+
+    
+      <div class="post-meta">
+        <i class="fas fa-tags"></i>
+        <ul class="post-taxonomies post-tags">
+          
+          
+            <li class="post-tag">
+              
+              <a href="/tags/#%EA%B3%B5%EB%B6%80">공부</a>
+            </li>
+          
+            <li class="post-tag">
+              
+              <a href="/tags/#%EB%94%95%EC%85%94%EB%84%88%EB%A6%AC">딕셔너리</a>
+            </li>
+          
+            <li class="post-tag">
+              
+              <a href="/tags/#%EC%A0%95%EB%A6%AC">정리</a>
+            </li>
+          
+            <li class="post-tag">
+              
+              <a href="/tags/#%ED%8C%8C%EC%9D%B4%EC%8D%AC">파이썬</a>
+            </li>
+          
+        </ul>
+      </div>
+    
+
+    <nav class="post-pagination" role="navigation">
+      
+        <a class="post-previous" href="/%EA%B3%B5%EB%B6%80/2022/10/15/%ED%8C%8C%EC%9D%B4%EC%8D%AC_%ED%8A%9C%ED%94%8C_%EC%9E%90%EB%A3%8C%ED%98%95.html">
+          <h4 class="post-pagination-label">Prev</h4>
+          <span class="post-pagination-title">
+            <i class="fas fa-arrow-left"></i> 파이썬 튜플 자료형
+
+          </span>
+        </a>
+      
+
+      
+        <a class="post-next" href="/%EA%B3%B5%EB%B6%80/2022/10/17/%ED%8C%8C%EC%9D%B4%EC%8D%AC_%EC%A7%91%ED%95%A9_%EC%9E%90%EB%A3%8C%ED%98%95.html">
+          <h4 class="post-pagination-label">Next</h4>
+          <span class="post-pagination-title">
+            파이썬 집합 자료형
+ <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+      
+    </nav>
+  </footer>
+
+  
+  <script src="https://utteranc.es/client.js"
+        repo="divinggecko/divinggecko.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+  </script>
+  
+</article>
+
+          <footer class="site-footer">
+            <div class="footer-col-wrapper">
+
+  <div class="footer-col">
+    <div class="copyright">
+      
+      
+      
+      
+      <p>Copyright © 2022 Dong Hyun Lim; All rights reserved.</p>
+      
+    </div>
+    <p>
+      Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://github.com/ngzhio/jekyll-theme-hamilton">Hamilton</a>
+    </p>
+  </div>
+
+  <div class="footer-col">
+    <p>이직을 위한 한걸음 코딩 배우기</p>
+  </div>
+</div>
+
+          </footer>
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>
