@@ -166,12 +166,17 @@ The navigation bar also supports dropdown submenus:
 You can create a file `_data/social.yml` to configure links to your social media. For example,
 
 ```yml
-- title: Instargram
-  url: https://instargram.com/klj1029/
-  icon: fa-brands fa-instagram
+- title: Instagram
+  url: https://instagram.com/klj1029/
+  icon: fab fa-instagram
+
 - title: GitHub
-  url: https://github.com/ngzhio/jekyll-theme-hamilton
+  url: https://github.com/divinggecko
   icon: fab fa-github
+
+- title: Notion
+  url: https://rustic-touch-e8b.notion.site/b195ffc1bb3c40098671ebb4079a307d
+  icon: fab fa-resum
 ```
 
 ### Skins

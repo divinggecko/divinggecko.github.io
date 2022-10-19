@@ -1,7 +1,11 @@
 - title: Instagram
   url: https://instagram.com/klj1029/
-  Icon: icon-instagram
+  icon: fab fa-instagram
 
 - title: GitHub
   url: https://github.com/divinggecko
   icon: fab fa-github
+
+- title: Notion
+  url: https://rustic-touch-e8b.notion.site/b195ffc1bb3c40098671ebb4079a307d
+  icon: fab fa-user
